@@ -1,0 +1,27 @@
+con Student = class() {
+    con new = function(name: string, height: int) {
+        var this.name: string = name
+        var this.height: int = height
+    }
+
+    con show = function() {
+        log("student info", this.name, this.height)
+    }
+
+    con update = function(name: string, height: int) -> string {
+        var a = this.name
+        log(a)
+        this.name = name
+        this.height = height
+        return a
+    }
+}
+
+con InitStudent = function() -> *Student {
+    return Student.new("gua", 169)
+}
+
+con __main = function() {
+    var s1 = InitStudent().update("gao", 178).cut(1, 5)
+    log(s1)
+}
